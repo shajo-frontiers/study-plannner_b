@@ -1,6 +1,6 @@
 import './App.css';
 import TimeTable, {TimetableEvent} from './TimeTable'
-
+import Description from './Description'
 
 function App() {
   const events:TimetableEvent[] = [
@@ -11,8 +11,9 @@ function App() {
   return (
     <>
       <header>
-        <h1 class="h-7">Study Planner</h1>
+        <h1 className="h-7">Study planner</h1>
       </header>
+      <Description />
       <TimeTable events={events}></TimeTable>
     </>
   );
