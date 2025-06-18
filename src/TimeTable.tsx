@@ -24,6 +24,7 @@ const dayLabels: Record<Day, string> = {
 
 const periods: Period[] = [1, 2, 3, 4, 5, 6];
 
+
 interface TimeTableProps {
   /** 時間割データ */
   events: TimetableEvent[];
@@ -81,7 +82,7 @@ const TimeTable: React.FC<TimeTableProps> = ({
         {periods.map((p) => (
           <React.Fragment key={p}>
             {/* 時限ラベル */}
-            <div className="border-r border-gray-300 flex items-center justify-center text-xs">
+            <div className="border-r border-black-300 flex items-center justify-center text-xs">
               {p}限
             </div>
             {/* 各曜日セル */}
