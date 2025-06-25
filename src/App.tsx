@@ -1,5 +1,6 @@
 import './App.css';
 import TimeTable, {TimetableEvent} from './TimeTable'
+import Description from './Description'
 
 
 function App() {
@@ -8,11 +9,13 @@ function App() {
     {day: "Wed", period: 3, title: "ITビジネスのフロンティア"}
   ];
 
+  const username = '中央太郎'
   return (
     <>
       <header>
-        <h1 class="h-7">Study Planner</h1>
+        <h1 className="h-7">Study Planner Pro</h1>
       </header>
+      <Description username = {username}/>
       <TimeTable events={events}></TimeTable>
     </>
   );

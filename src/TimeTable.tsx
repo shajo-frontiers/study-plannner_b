@@ -24,6 +24,17 @@ const dayLabels: Record<Day, string> = {
 
 const periods: Period[] = [1, 2, 3, 4, 5, 6];
 
+// ADDED: デフォルトの時間帯データを定義
+const defaultPeriodTimes: Record<Period, string> = {
+  1: "9:00~10:40",
+  2: "10:50~12:30",
+  3: "13:20~15:00",
+  4: "15:10~16:50",
+  5: "17:00~18:30",
+  6: "18:40~20:30",
+};
+
+
 interface TimeTableProps {
   /** 時間割データ */
   events: TimetableEvent[];
@@ -31,6 +42,8 @@ interface TimeTableProps {
   fullHeight?: boolean;
   /** fullHeight 時に差し引く高さ (px) */
   offset?: number;
+  /** 各時限の時間帯 (任意) */ // ADDED: Propsに時間データを追加
+  periodTimes?: Record<Period, string>;
 }
 
 /**
@@ -43,6 +56,8 @@ const TimeTable: React.FC<TimeTableProps> = ({
   events,
   fullHeight = true,
   offset = 0,
+  // CHANGED: propsで受け取り、デフォルト値を設定
+  periodTimes = defaultPeriodTimes,
 }) => {
   /** ルックアップ用マップ: { "Mon-1": "数学" } */
   const eventMap = React.useMemo(() => {
@@ -62,10 +77,10 @@ const TimeTable: React.FC<TimeTableProps> = ({
   return (
     <div className="overflow-x-auto" style={containerStyle}>
       <div
-        className={`grid border border-gray-300 [grid-template-columns:60px_repeat(6,1fr)] ${rows} h-full`}
+        className={`grid border border-gray-300 [grid-template-columns:80px_repeat(6,1fr)] ${rows} h-full`} // CHANGED: 左端の列幅を調整 (例: 60px -> 80px)
       >
         {/* 左上ダミー */}
-        <div className="bg-gray-100 border-b border-gray-300" />
+        <div className="bg-gray-100 border-b border-r border-gray-300" />
 
         {/* 曜日ヘッダー（日本語表記） */}
         {days.map((day) => (
@@ -80,10 +95,21 @@ const TimeTable: React.FC<TimeTableProps> = ({
         {/* 本体：period × days */}
         {periods.map((p) => (
           <React.Fragment key={p}>
-            {/* 時限ラベル */}
+            {/* --- ここからが変更箇所 --- */}
+            {/* 時限ラベルと時間 */}
             <div className="border-r border-gray-300 flex items-center justify-center text-xs">
-              {p}限
+              <div className="flex flex-col items-center">
+                <span className="font-semibold">{p}限</span>
+                {/* periodTimesから時間を取得して表示 */}
+                {periodTimes[p] && (
+                  <span className="text-[10px] text-gray-500 mt-1">
+                    {periodTimes[p]}
+                  </span>
+                )}
+              </div>
             </div>
+            {/* --- ここまでが変更箇所 --- */}
+
             {/* 各曜日セル */}
             {days.map((d) => {
               const key = `${d}-${p}`;
