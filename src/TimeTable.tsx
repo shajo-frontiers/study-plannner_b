@@ -54,8 +54,8 @@ const TimeTable: React.FC<TimeTableProps> = ({
     return m;
   }, [events]);
 
-  // 行テンプレート：40px + 6行を均等分配
-  const rows = "[grid-template-rows:40px_repeat(6,minmax(0,1fr))]";
+  // 行テンプレート：30px + 6行を均等分配
+  const rows = "[grid-template-rows:30px_repeat(6,minmax(0,1fr))]";
   const containerStyle: React.CSSProperties | undefined = fullHeight
     ? { height: `calc(100vh - ${offset}px)` }
     : undefined;
