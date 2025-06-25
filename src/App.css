@@ -40,3 +40,41 @@
 .read-the-docs {
   color: #888;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* 上の要素との余白 */
+}
+
+.add-event-button1 {
+  background-color: #007bff; /* 背景色 */
+  color: white;             /* 文字色 */
+  border: none;             /* 枠線をなくす */
+  padding: 10px 20px;       /* 内側の余白（上下10px, 左右20px） */
+  border-radius: 5px;       /* 角を丸くする */
+  font-size: 16px;          /* 文字サイズ */
+  cursor: pointer;          /* マウスカーソルを手の形にする */
+  transition: background-color 0.3s; /* ホバー時の色の変化を滑らかに */
+}
+
+/* マウスがボタンに乗った時のスタイル */
+.add-event-button1:hover {
+  background-color: #0056b3; /* 少し暗い色に変化 */
+}
+
+.add-event-button2 {
+  background-color: #ffaa00; /* 背景色 */
+  color: white;             /* 文字色 */
+  border: none;             /* 枠線をなくす */
+  padding: 10px 20px;       /* 内側の余白（上下10px, 左右20px） */
+  border-radius: 5px;       /* 角を丸くする */
+  font-size: 16px;          /* 文字サイズ */
+  cursor: pointer;          /* マウスカーソルを手の形にする */
+  transition: background-color 0.3s; /* ホバー時の色の変化を滑らかに */
+}
+
+/* マウスがボタンに乗った時のスタイル */
+.add-event-button2:hover {
+  background-color: #c38304; /* 少し暗い色に変化 */
+}
