@@ -11,18 +11,19 @@ function Description() {
 
     return (
         <section>
-            <p>{/* テキスト入力フィールド */}
-                <input
-                    type="text"
-                    value={username} // 入力値はusernameの状態によって制御される
-                    onChange={handleNameChange} // 入力が変更されたらhandleNameChangeを呼び出す
-                    aria-label="ユーザー名" // アクセシビリティ用のラベル
-                    style={{ textAlign: 'center' }} // ← このインラインスタイルを追加してテキストを中央揃えにする
-                />
-            </p>
-            <p>さん</p>
+          <p style={{ display: 'inline-block', margin: 0 }}>
+            <input
+              type="text"
+              value={username}
+              onChange={handleNameChange}
+              aria-label="ユーザー名"
+              style={{ textAlign: 'center' }}
+            />
+            {/* 「さん」をそのまま続ける */}
+            さん
+          </p>
         </section>
-    );
+      );
 }
 
 export default Description;

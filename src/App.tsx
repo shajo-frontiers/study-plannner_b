@@ -9,13 +9,13 @@ function App() {
     {day: "Wed", period: 3, title: "ITビジネスのフロンティア"}
   ];
 
-  const username = '中央太郎'
+  const username1 = '中央太郎'
   return (
     <>
       <header>
         <h1 className="h-7">Study Planner Pro</h1>
       </header>
-      <Description username = {username}/>
+      <Description username = {username1}/>
       <TimeTable events={events}></TimeTable>
     </>
   );
