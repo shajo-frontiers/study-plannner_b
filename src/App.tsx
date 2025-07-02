@@ -19,7 +19,7 @@ function App() {
       <Description />
       <SearchClassName />
       <TimeTable events={events}></TimeTable>
-      <div className="button-container"> {/* ← 1つのコンテナにまとめる */}
+      <div className="button-container"> {/* ← */}
        <button className="add-event-button2">セット</button>
        <button className="add-event-button1">検索</button>
       </div>
