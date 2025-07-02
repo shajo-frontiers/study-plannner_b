@@ -5,14 +5,13 @@ function Description() {
     const [username, setUsername] = useState('中央太郎');
 
     // 入力フィールドの変更を処理
-    const handleNameChange = (event) => {
+    const handleNameChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
         setUsername(event.target.value); // ユーザー名の状態を更新
     };
 
     return (
         <section>
-            <p>
-                {/* テキスト入力フィールド */}
+            <p>{/* テキスト入力フィールド */}
                 <input
                     type="text"
                     value={username} // 入力値はusernameの状態によって制御される
@@ -21,7 +20,7 @@ function Description() {
                     style={{ textAlign: 'center' }} // ← このインラインスタイルを追加してテキストを中央揃えにする
                 />
             </p>
-            <p> さん　こんにちは</p>
+            <p>さん</p>
         </section>
     );
 }

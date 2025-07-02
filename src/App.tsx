@@ -1,7 +1,6 @@
 import './App.css';
 import TimeTable, {TimetableEvent} from './TimeTable'
-import Description from  "./Description"
-import SearchClassName from './SearchClassName';
+import Description from './Description'
 
 
 function App() {
@@ -14,15 +13,10 @@ function App() {
   return (
     <>
       <header>
-        <h1 className="h-7">Study Planner</h1>
+        <h1 className="h-7">Study Planner Pro</h1>
       </header>
-      <Description />
-      <SearchClassName />
+      <Description username = {username}/>
       <TimeTable events={events}></TimeTable>
-      <div className="button-container"> 
-       <button className="add-event-button2">セット</button>
-       <button className="add-event-button1">設定</button>
-      </div>
     </>
   );
 }
