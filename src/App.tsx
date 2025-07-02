@@ -10,6 +10,7 @@ function App() {
     {day: "Wed", period: 3, title: "ITビジネスのフロンティア"}
   ];
 
+  const username = '中央太郎'
   return (
     <>
       <header>
