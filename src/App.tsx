@@ -18,8 +18,8 @@ function App() {
       <Description username = {username}/>
       <TimeTable events={events}></TimeTable>
       <div className="button-container"> {/* ← 1つのコンテナにまとめる */}
-       <button className="add-event-button2">履歴</button>
-       <button className="add-event-button1">検索</button>
+       <button className="add-event-button2">セット</button>
+       <button className="add-event-button1">設定</button>
       </div>
     </>
   );
