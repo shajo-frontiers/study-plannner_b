@@ -4,7 +4,7 @@ import Description from "./Description";
 import SearchClassName from './SearchClassName';
 import React, { useState } from 'react';
 import NewScreen from './NewScreen';
-import SettingsScreen from './SettingsScreen'; // 新しく作成した設定画面をインポート
+import SettingsScreen from './SettingsScreen'; 
 
 function App() {
   const events: TimetableEvent[] = [
