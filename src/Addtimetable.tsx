@@ -1,4 +1,4 @@
-function AddTimetable() {
+function AddTimetableIcon() {
   return (
     <section>
       <input 
@@ -12,4 +12,4 @@ function AddTimetable() {
   )
 }
 
-export default AddTimetable;
+export default AddTimetableIcon;
