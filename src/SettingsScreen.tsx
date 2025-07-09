@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Appコンポーネントから渡される `onBack` 関数の型を定義します
 interface SettingsScreenProps {
   onBack: () => void;
 }
@@ -8,6 +7,7 @@ interface SettingsScreenProps {
 function SettingsScreen() {
   return (
 <div class="accordion accordion-flush" id="accordionFlushExample">
+  <h1>設定</h1>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
