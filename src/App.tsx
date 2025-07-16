@@ -12,7 +12,7 @@ function App() {
     { day: "Wed", period: 3, title: "ITビジネスのフロンティア" }
   ];
 
-  // 'main', 'set', 'settings' の3つの状態で画面を管理します
+  // 'main', 'set', 'settings' の3つの状態で画面を管理
   const [currentScreen, setCurrentScreen] = useState('main');
 
   // メイン画面に戻るための関数
