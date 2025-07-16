@@ -68,8 +68,8 @@ const TimeTable: React.FC<TimeTableProps> = ({
     return m;
   }, [events]);
 
-  // 行テンプレート：40px + 6行を均等分配
-  const rows = "[grid-template-rows:40px_repeat(6,minmax(0,1fr))]";
+  // 行テンプレート：30px + 6行を均等分配
+  const rows = "[grid-template-rows:30px_repeat(6,minmax(0,1fr))]";
   const containerStyle: React.CSSProperties | undefined = fullHeight
     ? { height: `calc(100vh - ${offset}px)` }
     : undefined;
@@ -77,10 +77,10 @@ const TimeTable: React.FC<TimeTableProps> = ({
   return (
     <div className="overflow-x-auto" style={containerStyle}>
       <div
-        className={`grid border border-gray-300 [grid-template-columns:80px_repeat(6,1fr)] ${rows} h-full`} // CHANGED: 左端の列幅を調整 (例: 60px -> 80px)
+        className={`grid border border-gray-400 [grid-template-columns:65px_repeat(6,1fr)] ${rows} h-full`} // CHANGED: 左端の列幅を調整 (例: 60px -> 65px)
       >
         {/* 左上ダミー */}
-        <div className="bg-gray-100 border-b border-r border-gray-300" />
+        <div className="bg-gray-100 border-b border-gray-300" />
 
         {/* 曜日ヘッダー（日本語表記） */}
         {days.map((day) => (
@@ -97,9 +97,9 @@ const TimeTable: React.FC<TimeTableProps> = ({
           <React.Fragment key={p}>
             {/* --- ここからが変更箇所 --- */}
             {/* 時限ラベルと時間 */}
-            <div className="border-r border-gray-300 flex items-center justify-center text-xs">
+            <div className="border-b border-b-gray-300 border-r border-r-gray-300 bg-purple-50 flex items-center justify-center text-xs">
               <div className="flex flex-col items-center">
-                <span className="font-semibold">{p}限</span>
+                <span className="text-[14px] font-semibold">{p}限</span>
                 {/* periodTimesから時間を取得して表示 */}
                 {periodTimes[p] && (
                   <span className="text-[10px] text-gray-500 mt-1">
