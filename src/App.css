@@ -38,43 +38,32 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #c47d7d;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* 上の要素との余白 */
+.h-7{
+  color: rgb(170, 64, 130);
+  font-size: 1.3rem;
+  margin-bottom: 3px;
 }
 
-.add-event-button1 {
-  background-color: #007bff; /* 背景色 */
-  color: white;             /* 文字色 */
-  border: none;             /* 枠線をなくす */
-  padding: 10px 20px;       /* 内側の余白（上下10px, 左右20px） */
-  border-radius: 5px;       /* 角を丸くする */
-  font-size: 16px;          /* 文字サイズ */
-  cursor: pointer;          /* マウスカーソルを手の形にする */
-  transition: background-color 0.3s; /* ホバー時の色の変化を滑らかに */
+.username{
+  margin-top: 5px;
 }
 
-/* マウスがボタンに乗った時のスタイル */
-.add-event-button1:hover {
-  background-color: #0056b3; /* 少し暗い色に変化 */
+.controls2 {
+  position: relative;
+  top: -2rem;
+  text-align: center;
 }
 
-.add-event-button2 {
-  background-color: #ffaa00; /* 背景色 */
-  color: white;             /* 文字色 */
-  border: none;             /* 枠線をなくす */
-  padding: 10px 20px;       /* 内側の余白（上下10px, 左右20px） */
-  border-radius: 5px;       /* 角を丸くする */
-  font-size: 16px;          /* 文字サイズ */
-  cursor: pointer;          /* マウスカーソルを手の形にする */
-  transition: background-color 0.3s; /* ホバー時の色の変化を滑らかに */
+.controls {
+  position: relative;
+  top: -4rem;
+  text-align: right;
 }
 
-/* マウスがボタンに乗った時のスタイル */
-.add-event-button2:hover {
-  background-color: #c38304; /* 少し暗い色に変化 */
+.timetable{
+  position: relative;
+  top: -1.5rem;  /* こちらも調整 */
 }

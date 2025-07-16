@@ -1,9 +1,11 @@
 import './App.css';
 import TimeTable, {TimetableEvent} from './TimeTable'
-import Description from  "./Description"
-import SearchClassName from './SearchClassName';
-import React, { useState } from 'react'; // useStateをインポート
-import NewScreen from './NewScreen'; // NewScreenコンポーネントをインポート
+import Description from './Description'
+import SearchClassName from './SearchClassName'
+import React, { useState } from 'react';
+import NewScreen from './NewScreen';
+import SettingsScreen from './SettingsScreen'; 
+import AddtimetableIcon from './AddtimetableIcon'
 
 function App() {
   const events:TimetableEvent[] = [
@@ -17,12 +19,17 @@ function App() {
     setScreen('new'); // 画面を'new'に切り替え
   };
 
-  const username = '中央太郎'
+  const username1 = '中央太郎'
+
   return (
     <>
       <header>
-        <h1 className="h-7">Study Planner</h1>
+        <h1 className="h-7">Study Planner Pro</h1>
       </header>
+      <div className="username"><Description username = {username1}/></div>
+      <div className="controls"><AddtimetableIcon /></div>
+      <div className="controls2"><SearchClassName /></div>
+      <div className="timetable"><TimeTable events={events} /></div>
       {screen === 'main' ? (
         <>
           <Description />
