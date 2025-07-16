@@ -7,7 +7,6 @@ import NewScreen from './NewScreen';
 import SettingsScreen from './SettingsScreen'; 
 import AddtimetableIcon from './AddtimetableIcon'
 
-
 function App() {
   const events:TimetableEvent[] = [
     {day: "Wed", period: 2, title: "情報システム設計"},
@@ -21,6 +20,7 @@ function App() {
   };
 
   const username1 = '中央太郎'
+
   return (
     <>
       <header>
